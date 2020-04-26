@@ -2,10 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 import { useLocation } from '@reach/router'
-import { Box, Flex, Container, NavLink } from 'theme-ui'
+import { Box, Container, Flex, NavLink } from 'theme-ui'
 import SkipNavLink from './SkipNavLink'
 import Logo from './Logo'
-import ColorModeToggle from './ColorModeToggle'
 
 const Nav = ({ sx, ...props }) => {
   const location = useLocation()
@@ -30,7 +29,6 @@ const Nav = ({ sx, ...props }) => {
         }}
       >
         <SkipNavLink />
-
         <Logo />
 
         <Flex sx={{ alignItems: 'center' }}>
@@ -49,26 +47,13 @@ const Nav = ({ sx, ...props }) => {
             <li>
               <NavLink
                 as={GatsbyLink}
-                to="/projects"
-                data-active={location.pathname === '/projects' ? true : null}
-                mr={[1, 2]}
+                to="/about"
+                data-active={location.pathname.includes('/about') ? true : null}
               >
-                Projects
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
-                as={GatsbyLink}
-                to="/blog"
-                data-active={location.pathname.includes('/blog') ? true : null}
-              >
-                Blog
+                About
               </NavLink>
             </li>
           </Flex>
-
-          <ColorModeToggle aria-hidden ml={[2, 3]} />
         </Flex>
       </Container>
     </Box>

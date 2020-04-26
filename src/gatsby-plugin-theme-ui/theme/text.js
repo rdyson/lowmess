@@ -28,4 +28,8 @@ export default {
     fontWeight: 'bold',
     letterSpacing: '-0.02em',
   },
+
+  'blog-category': {
+    textTransform: 'capitalize',
+  },
 }

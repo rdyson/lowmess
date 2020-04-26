@@ -3,3 +3,5 @@ public
 .cache
 *.log
 .vscode
+
+.now

@@ -31,6 +31,7 @@ const BlogPostTemplate = ({ pageContext, children }) => {
               title
               date(formatString: "MMMM D, YYYY")
               datetime: date(formatString: "YYYY-MM-DD")
+              tag
             }
             fields {
               slug
@@ -79,7 +80,7 @@ const BlogPostTemplate = ({ pageContext, children }) => {
       <Box as="header">
         <Container sx={{ maxWidth: 'mdx-measure', fontSize: [null, null, 3] }}>
           <HeaderName as="time" dateTime={post.frontmatter.datetime}>
-            {post.frontmatter.date}
+            {post.frontmatter.date} / {post.frontmatter.tag}
           </HeaderName>
 
           <HeaderTitle aria-hidden="false">
