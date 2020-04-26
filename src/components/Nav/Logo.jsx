@@ -7,7 +7,7 @@ const Logo = (props) => (
     <Link
       as={GatsbyLink}
       to="/"
-      sx={{ display: 'inline', color: 'primary', textDecoration: 'none' }}
+      sx={{ display: 'inline', color: 'text', textDecoration: 'none' }}
       tabIndex="-1"
       {...props}
     >
