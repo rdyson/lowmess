@@ -2,7 +2,7 @@ const fonts = {
   sans:
     'Asap, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Oxygen, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
   mono:
-    '"Dank Mono", Dank, dm, Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Oxygen Mono, Liberation Mono, monospace',
+    'MesloLGS, Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Oxygen Mono, Liberation Mono, monospace',
 }
 
 fonts.heading = fonts.sans

@@ -33,7 +33,7 @@ const Code = ({ className: languageClass, children, ...props }) => {
   return (
     <Box
       sx={{
-        backgroundColor: 'black',
+        backgroundColor: 'muted',
 
         '.prism-code': {
           backgroundColor: 'transparent !important',
