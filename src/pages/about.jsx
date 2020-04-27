@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
 import { Text, Heading, Link, Container } from 'theme-ui'
 import Layout from '../components/Layout'
-import getStats from '../utils/getStats'
 import pluralize from '../utils/pluralize'
 
 const ValueCount = ({ value, singular, plural }) => (
@@ -66,105 +64,43 @@ BooksToSentence.propTypes = {
 }
 
 const IndexPage = () => {
-  const { stats } = useStaticQuery(graphql`
-    query IndexPage {
-      stats {
-        commits
-        tweets
-        steps
-        places
-        songs
-        album {
-          name
-          artist
-        }
-        books {
-          name
-          author
-        }
-      }
-    }
-  `)
-
-  const [commits, setCommits] = React.useState(stats.commits)
-  const [tweets, setTweets] = React.useState(stats.tweets)
-  const [steps, setSteps] = React.useState(stats.steps)
-  const [places, setPlaces] = React.useState(stats.places)
-  const [songs, setSongs] = React.useState(stats.songs)
-  const [album, setAlbum] = React.useState(stats.album)
-  const [books, setBooks] = React.useState(stats.books)
-
-  const hydrateStats = async () => {
-    const {
-      commits: commitStat,
-      tweets: tweetsStat,
-      places: placesStat,
-      steps: stepsStat,
-      songs: songsStat,
-      album: albumStat,
-      books: booksStat,
-    } = await getStats()
-
-    if (typeof commitStat === 'number') setCommits(commitStat)
-
-    if (typeof tweetsStat === 'number') setTweets(tweetsStat)
-
-    if (typeof placesStat === 'number') setPlaces(placesStat)
-
-    if (typeof stepsStat === 'number') setSteps(stepsStat)
-
-    if (typeof songsStat === 'number') setSongs(songsStat)
-
-    if (albumStat?.name && albumStat?.artist) setAlbum(albumStat)
-
-    if (booksStat.length > 0) setBooks(booksStat)
-  }
-
-  React.useEffect(() => {
-    hydrateStats()
-  }, [])
-
   return (
     <Layout>
       <Container>
         <Text variant="section-heading" mb={3}>
-          Introduction
+          Howdy
         </Text>
 
         {/* The `Text` wrapper makes sure spaces are consistently sized */}
         <Text variant="site-intro" sx={{ display: 'contents' }}>
           <Heading as="h1" variant="site-intro" sx={{ fontWeight: 'bold' }}>
-            My name is Alec Lomas, and I make websites.
-          </Heading>{' '}
-          <Heading as="h2" variant="site-intro">
-            Currently, I&rsquo;m helping recruiting stay human at{' '}
-            <Link href="https://hiringsolved.com">HiringSolved</Link>.
+            Hi! I’m Rob. I’m a software developer in Mexico City.
           </Heading>{' '}
           <Text as="p" variant="site-intro">
-            In the last 30 days, I&rsquo;ve pushed{' '}
-            <Link href="https://github.com/lowmess">
-              <ValueCount value={commits} singular="commit" plural="commits" />
-            </Link>{' '}
-            to GitHub, sent{' '}
-            <Link href="https://twitter.com/lowmess">
-              <ValueCount value={tweets} singular="tweet" plural="tweets" />
+            I’ve been co-founder and CTO at a couple of startups, and am now an
+            engineer at <Link href="https://runahr.com">Runa HR</Link>. I’ve
+            also been described as vegan, a bit English, and rather sarcastic.
+            I’m into personal productivity,{' '}
+            <Link href="https://www.effectivealtruism.org/articles/introduction-to-effective-altruism">
+              effective altruism
             </Link>
-            , taken <ValueCount value={steps} singular="step" plural="steps" />,
-            and visited{' '}
-            <ValueCount value={places} singular="place" plural="places" />. My
-            most played album is{' '}
-            <Link href="https://www.last.fm/user/lowmess/library/albums?date_preset=LAST_30_DAYS">
-              &ldquo;{album.name}&rdquo; by {album.artist}
+            , and{' '}
+            <Link href="http://www.coffeegeek.com/guides/aeropresscoldbrew">
+              coffee
             </Link>
-            , and I&rsquo;ve listened to{' '}
-            <Link href="https://www.last.fm/user/lowmess">
-              <ValueCount value={songs} singular="song" plural="songs" />
-            </Link>{' '}
-            overall. I am reading{' '}
-            <Link href="https://www.goodreads.com/user/show/27057705-alec-lomas">
-              <ValueCount value={books.length} singular="book" plural="books" />
-            </Link>{' '}
-            at the moment: <BooksToSentence books={books} />.
+            . In a past life I was a music producer and engineer.
+          </Text>
+          <Text as="p" variant="site-intro">
+            Lately I’ve been using <Link href="https://reactjs.org">React</Link>
+            , <Link href="https://www.gatsbyjs.org">Gatsby</Link>, and{' '}
+            <Link href="https://rubyonrails.org">Ruby on Rails</Link>. I’m also
+            familiar with ES6, Node, and shell scripting.
+          </Text>
+          <Text as="p" variant="site-intro">
+            I have a{' '}
+            <Link href="https://notes.rdyson.dev">notes repository</Link> that I
+            use primarily as a personal wiki, but you may find something useful
+            there. You can reach me at rob at rdyson.dev, and rdyson elsewhere.
           </Text>
         </Text>
       </Container>

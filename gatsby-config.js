@@ -21,9 +21,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-graphql',
-    },
-    {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {

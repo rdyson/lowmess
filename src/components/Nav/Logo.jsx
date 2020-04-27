@@ -11,7 +11,10 @@ const Logo = (props) => (
       tabIndex="-1"
       {...props}
     >
-      rdyson.dev
+      rdyson.dev{' '}
+      <span role="img" aria-label="nerd!">
+        🤓
+      </span>
     </Link>
   </Heading>
 )

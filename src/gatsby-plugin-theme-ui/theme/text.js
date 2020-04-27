@@ -7,11 +7,12 @@ export default {
   },
 
   'site-intro': {
-    display: 'inline',
+    display: 'block',
     fontSize: [5, 6],
     fontWeight: 'normal',
     lineHeight: 'copy',
     letterSpacing: '-0.02em',
+    marginTop: '0.5em',
   },
 
   'section-heading': {
