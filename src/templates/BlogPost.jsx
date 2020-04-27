@@ -61,7 +61,7 @@ const BlogPostTemplate = ({ pageContext, children }) => {
 
         <meta name="description" content={post.frontmatter.description} />
 
-        <meta name="twitter:site" content="@lowmess" />
+        <meta name="twitter:site" content="@rdyson" />
         <meta name="twitter:card" content="summary" />
         <meta property="og:site_name" content={title} />
         <meta

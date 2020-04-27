@@ -11,7 +11,7 @@ const Link = (props) => (
         },
 
         "&[href^='/']::after": {
-          content: `' (https://lowmess.com' attr(href) ')'`,
+          content: `' (https://rdyson.dev' attr(href) ')'`,
         },
 
         "&[href^='#']": {

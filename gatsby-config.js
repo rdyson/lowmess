@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'lowmess',
-    description: `My name is Alec Lomas, and I make websites.`,
-    siteUrl: 'https://www.lowmess.com',
+    title: 'rdyson.dev',
+    description: `rdyson.dev`,
+    siteUrl: 'https://rdyson.dev',
   },
   plugins: [
     // Adding various source folders to the GraphQL layer.
@@ -22,11 +22,6 @@ module.exports = {
     },
     {
       resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'STATS',
-        fieldName: 'stats',
-        url: 'https://stats.lowmess.com/graphql',
-      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
@@ -109,8 +104,7 @@ module.exports = {
                 }
               `,
             output: '/rss.xml',
-            title: 'Alec Lomas • lowmess.com',
-            match: '^/blog/',
+            title: 'rdyson.dev',
           },
         ],
       },
@@ -118,8 +112,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'lowmess',
-        short_name: 'lowmess',
+        name: 'rdyson.dev',
+        short_name: 'rdyson.dev',
         start_url: '/',
         background_color: '#f2930d',
         theme_color: '#f9f9f8',

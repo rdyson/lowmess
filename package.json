@@ -1,7 +1,7 @@
 {
-  "name": "lowmess",
-  "version": "3.0.0",
-  "description": "The website and portfolio of Alec Lomas",
+  "name": "rdyson.dev",
+  "version": "1.0.0",
+  "description": "The website and portfolio of Rob Dyson",
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
@@ -9,19 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lowmess/lowmess.git"
+    "url": "git+https://github.com/rdyson/lowmess.git"
   },
-  "keywords": [
-    "portfolio",
-    "frontend",
-    "design"
-  ],
-  "author": "Alec Lomas",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lowmess/lowmess/issues"
-  },
-  "homepage": "https://lowmess.com",
+  "author": "Rob Dyson",
+  "homepage": "https://rdyson.dev",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.8",
     "@mdx-js/react": "^1.5.8",

@@ -1,4 +1,6 @@
-# lowmess.com
+# rdyson.dev
+
+Based on [Alex Lowmas' theme](https://github.com/lowmess).
 
 ## Installing
 

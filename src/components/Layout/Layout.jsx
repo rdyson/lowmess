@@ -18,8 +18,8 @@ const Head = () => {
       <meta name="description" content={description} />
       {/* theming */}
       <meta name="theme-color" content={theme.colors.muted} />
-      <meta name="apple-mobile-web-app-title" content="lowmess" />
-      <meta name="application-name" content="lowmess" />
+      <meta name="apple-mobile-web-app-title" content="rdyson.dev" />
+      <meta name="application-name" content="rdyson.dev" />
       <meta name="msapplication-TileColor" content={theme.colors.primary} />
       {/* icons */}
       <link
