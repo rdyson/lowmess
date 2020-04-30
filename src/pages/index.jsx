@@ -37,7 +37,7 @@ const BlogPage = () => {
       </Helmet>
 
       <Header>
-        <HeaderName>Blog</HeaderName>
+        <HeaderName>Bloggins</HeaderName>
 
         <HeaderTitle>Stuff about Things</HeaderTitle>
       </Header>
