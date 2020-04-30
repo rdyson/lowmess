@@ -23,7 +23,7 @@ const Footer = (props) => {
           <FooterLink href="https://gatsbyjs.org">Gatsby</FooterLink>, and it’s
           hosted on <FooterLink href="https://vercel.com">Vercel</FooterLink>.
           The theme is by{' '}
-          <FooterLink href="https://lowmess.com">Alex Lomas</FooterLink>.
+          <FooterLink href="https://lowmess.com">Alec Lomas</FooterLink>.
         </Box>
       </Container>
     </Box>
