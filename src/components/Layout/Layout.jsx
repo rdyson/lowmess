@@ -15,6 +15,11 @@ const Head = () => {
     <Helmet defaultTitle={title} titleTemplate={`%s • ${title}`}>
       <html lang="en" />
 
+      <script src="https://getinsights.io/static/js/insights.js"></script>
+      <script>
+        insights.init(&quot;IvwTObDvNB8j1U5o&quot;); insights.trackPages();
+      </script>
+
       <meta name="description" content={description} />
       {/* theming */}
       <meta name="theme-color" content={theme.colors.muted} />
