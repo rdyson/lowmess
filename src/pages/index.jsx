@@ -8,7 +8,7 @@ import { Header, HeaderName, HeaderTitle } from '../components/Header'
 const BlogPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx(sort: { order: ASC, fields: [frontmatter___tag] }) {
+      allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             frontmatter {
