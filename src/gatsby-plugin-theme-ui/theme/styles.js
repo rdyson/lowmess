@@ -14,4 +14,8 @@ export default {
       color: 'primary',
     },
   },
+
+  ul: {
+    paddingLeft: '1em',
+  },
 }
