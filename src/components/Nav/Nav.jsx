@@ -43,16 +43,6 @@ const Nav = ({ sx, ...props }) => {
                 Home
               </NavLink>
             </li>
-
-            <li>
-              <NavLink
-                as={GatsbyLink}
-                to="/about"
-                data-active={location.pathname.includes('/about') ? true : null}
-              >
-                About
-              </NavLink>
-            </li>
           </Flex>
         </Flex>
       </Container>
